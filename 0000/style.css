@@ -135,9 +135,20 @@
   height: auto; */
 	
   /* Set up positioning */
+  /* display: block;
   position: absolute;
-  top: 34%;
-  left: 40%;
+  top: 0;
+  left: 0;
+    width: 288.5px;
+    height: 500px;
+    transform: translateX(250%)translateY(60%);
+    perspective: 1000px; */
+    position: sticky;
+    top: 25%;
+    left: 18rem;
+    margin: 50px auto 0;
+    /* width: 577px;
+    height: 1000px; */
     width: 288.5px;
     height: 500px;
     perspective: 1000px;
@@ -189,7 +200,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 6rem;
+    padding-top: 0rem;
     font-variant: small-caps;
   }
   .card__text--about {
