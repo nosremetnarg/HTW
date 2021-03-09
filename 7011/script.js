@@ -1,4 +1,5 @@
 const audio = new Audio("../assets/BottomOfTheRiver-CricketsIntro.mp3");
+
 const body = document.getElementById("body");
 
 let isPlaying = false;
