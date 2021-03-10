@@ -27,3 +27,79 @@
   top: 0;
   left: 0;
 }
+#huntTheWitchText {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-right: 20px;
+  
+}
+
+#huntTheWitchText path:nth-child(1){
+  stroke-dasharray: 492px;
+  stroke-dashoffset: 492px;
+  animation: line-anim 2s ease forwards;
+}
+#huntTheWitchText path:nth-child(2){
+  stroke-dasharray: 425px;
+  stroke-dashoffset: 425px;
+  animation: line-anim 2s ease forwards 1s;
+}
+#huntTheWitchText path:nth-child(3){
+  stroke-dasharray: 513px;
+  stroke-dashoffset: 513px;
+  animation: line-anim 2s ease forwards 1.5s;
+}
+#huntTheWitchText path:nth-child(4){
+  stroke-dasharray: 314px;
+  stroke-dashoffset: 314px;
+  animation: line-anim 2s ease forwards 2s;
+}
+#huntTheWitchText path:nth-child(5){
+  stroke-dasharray: 314px;
+  stroke-dashoffset: 314px;
+  animation: line-anim 2s ease forwards 2.5s;
+}
+#huntTheWitchText path:nth-child(6){
+  stroke-dasharray: 492px;
+  stroke-dashoffset: 492px;
+  animation: line-anim 2s ease forwards 3s;
+}
+#huntTheWitchText path:nth-child(7){
+  stroke-dasharray: 401px;
+  stroke-dashoffset: 401px;
+  animation: line-anim 2s ease forwards 3.5s;
+}
+#huntTheWitchText path:nth-child(8){
+  stroke-dasharray: 633px;
+  stroke-dashoffset: 633px;
+  animation: line-anim 2s ease forwards 4s;
+}
+#huntTheWitchText path:nth-child(9){
+  stroke-dasharray: 206px;
+  stroke-dashoffset: 206px;
+  animation: line-anim 2s ease forwards 4.5s;
+}
+#huntTheWitchText path:nth-child(10){
+  stroke-dasharray: 314px;
+  stroke-dashoffset: 314px;
+  animation: line-anim 2s ease forwards 5s;
+}
+#huntTheWitchText path:nth-child(11){
+  stroke-dasharray: 471px;
+  stroke-dashoffset: 471px;
+  animation: line-anim 2s ease forwards 5.5s;
+}
+#huntTheWitchText path:nth-child(12){
+  stroke-dasharray: 492px;
+  stroke-dashoffset: 492px;
+  animation: line-anim 2s ease forwards 6s;
+}
+
+
+@keyframes line-anim {
+  to {
+      stroke-dashoffset: 0;
+  }
+}
