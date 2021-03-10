@@ -1,6 +1,7 @@
 const audio = new Audio("../assets/BottomOfTheRiver-CricketsIntro.mp3");
 
 const body = document.getElementById("body");
+const moon = document.getElementById("moon")
 
 let isPlaying = false;
 
@@ -25,4 +26,8 @@ document.addEventListener("click", function () {
   });
 
   
-
+document.addEventListener('click', function(e) {
+  console.log(e)
+  console.log("the moon is made of cheese")
+})
+// e.target.

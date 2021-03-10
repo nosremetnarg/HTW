@@ -11,7 +11,7 @@
 
 }
 #fire {
-    position:absolute;
+    position: absolute;
     top:140px; left:100px;
     visibility:hidden;
     z-index: 2;

@@ -1,5 +1,7 @@
+const knockImage = document.getElementById("fire");
+
 let imgId = "fire";
-let imgOnTime = 250;
+let imgOnTime = 1550;
 let randomNumber = Math.floor(Math.random() * 10);
 console.log(randomNumber);
 let imgOffTime = 5000;
@@ -28,3 +30,19 @@ function blinkImg() {
   ele.style.visibility = v;
   setTimeout("blinkImg()", t);
 }
+
+let knockCount = 0;
+
+document.addEventListener('click', function(e) {
+  if(e.target.id === "fire") {
+  knockCount++
+  console.log(`Knocked on the door ${knockCount} times `)
+    if (knockCount >= 3) {
+    console.log("cue new video")
+  }
+  } 
+  else {
+    console.log("find the door")
+  }
+})
+
