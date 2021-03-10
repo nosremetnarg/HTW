@@ -1,0 +1,19 @@
+body {
+    background-color: black;
+    min-height: 100%;
+    min-width: 1024px;
+}
+#container {
+    height: 100vh;
+}
+
+#morseCode {
+    color: white;
+    position: absolute;
+    display: block;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    font-size: 45px;
+    padding: 25% 0;
+}
