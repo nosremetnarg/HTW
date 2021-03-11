@@ -51,3 +51,29 @@ document.addEventListener('click', function(e) {
   }
 })
 
+// Show input Error
+function showError(input, message) {
+  const formControl = input.parentElement;
+  formControl.className = "form-control error";
+  const small = formControl.querySelector("small");
+  small.innerText = message;
+}
+
+//Show sucess outline
+function showSuccess(input, message) {
+  const formControl = input.parentElement;
+  formControl.className = "form-control success";
+}
+
+// Event Listener
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+console.log(answer.value);
+
+if (answer.value.toLowerCase( ) != "mirror") {
+  showError(answer, 'Try Again')
+} else {
+  showSuccess(answer)
+}
+})
+
