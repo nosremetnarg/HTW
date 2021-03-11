@@ -93,7 +93,7 @@ h2 {
 .form-control small {
   color: var(--error-color);
   position: absolute;
-  bottom: 0;
+  bottom: -18px;
   left: 0;
   visibility: hidden;
 }

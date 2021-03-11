@@ -2,7 +2,7 @@ const knockImage = document.getElementById("fire");
 
 const form = document.getElementById("form");
 const answer = document.getElementById("answer");
-
+const smallAnswer = document.getElementById("small");
 
 
 let imgId = "fire";
