@@ -1,5 +1,10 @@
 const knockImage = document.getElementById("fire");
 
+const form = document.getElementById("form");
+const answer = document.getElementById("answer");
+
+
+
 let imgId = "fire";
 let imgOnTime = 1550;
 let randomNumber = Math.floor(Math.random() * 10);

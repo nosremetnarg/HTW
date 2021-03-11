@@ -1,34 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
 :root {
-    --dark: #222;
-    --light: #f3f3f3;
-    --gold: #ffd700;
-  }
+  --dark: #222;
+  --light: #f3f3f3;
+  --gold: #ffd700;
+  --success-color: #2ecc71;
+  --error-color: #e74c3c;
+}
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans", sans-serif
 }
 #fire {
-    position: absolute;
-    top:140px; left:100px;
-    visibility:hidden;
-    z-index: 2;
-  }
+  position: absolute;
+  top: 140px;
+  left: 100px;
+  visibility: hidden;
+  z-index: 2;
+}
 
 video {
-    /* background: url(../img/moon.png) no-repeat center center fixed;  */
+  /* background: url(../img/moon.png) no-repeat center center fixed;  */
   /* Set rules to fill background */
   min-height: 100%;
   min-width: 1024px;
-	
+
   /* Set up proportionate scaling */
   width: 100%;
   height: auto;
-	
+
   /* Set up positioning */
   position: fixed;
   top: 0;
   left: 0;
 }
+
+/* FORM CSS */
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: white;
+  z-index: 1;
+  margin: 0;
+
+}
+h2 {
+  text-align: center;
+  margin: 0 0 20px;
+}
+.form {
+  padding: 30px 40px;
+}
+
+.form-control {
+  position: relative;
+}
+
+.form-control label {
+  display: block;
+}
+
+.form-control input {
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.form-control input:focus {
+  outline: 0;
+  border-color: #777;
+}
+
+.form-control.success input {
+  border-color: var(--success-color);
+}
+
+.form-control.error input {
+  border-color: var(--error-color);
+}
+
+.form-control small {
+  color: var(--error-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+.form button {
+  cursor: pointer;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 2px white;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
+}
+
