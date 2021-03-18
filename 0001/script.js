@@ -82,7 +82,7 @@ card.addEventListener("click", function () {
     } else if (newCardTitle !== "THE HANGED MAN") {
         // bull.classList.add('.visible')
     }
-    cardAbout.innerHTML = "hotdog";
+    cardAbout.innerHTML = "";
 
   } else if (isFlipped) {
 
