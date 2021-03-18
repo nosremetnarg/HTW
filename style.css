@@ -17,3 +17,77 @@ body {
     font-size: 45px;
     padding: 25% 0;
 }
+
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: white;
+    z-index: 1;
+    margin: 0;
+  
+  }
+  h2 {
+    text-align: center;
+    margin: 0 0 20px;
+  }
+  .form {
+    padding: 30px 40px;
+  }
+  
+  .form-control {
+    position: relative;
+  }
+  
+  .form-control label {
+    display: block;
+  }
+  
+  .form-control input {
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .form-control input:focus {
+    outline: 0;
+    border-color: #777;
+  }
+  
+  .form-control.success input {
+    border-color: var(--success-color);
+    border-width: medium;
+  }
+  
+  .form-control.error input {
+    border-color: var(--error-color);
+  }
+  
+  .form-control small {
+    color: var(--error-color);
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+    visibility: hidden;
+  }
+  
+  .form-control.error small {
+    visibility: visible;
+  }
+  
+  .form button {
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 2px white;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
