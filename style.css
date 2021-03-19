@@ -70,11 +70,13 @@ body {
   
   .form-control.success input {
     border-color: var(--success-color);
+    background-color: var(--success-color);
     border-width: large;
   }
   
   .form-control.error input {
     border-color: var(--error-color);
+    background-color: var(--error-color);
   }
   
   .form-control small {
