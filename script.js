@@ -1,6 +1,7 @@
 const form = document.getElementById("form");
 const answer = document.getElementById("answer");
 const smallAnswer = document.getElementById("small");
+// const proceedBtn = document.querySelector('link-btn')
 
 // Show input Error
 function showError(input, message) {
@@ -14,6 +15,7 @@ function showError(input, message) {
   function showSuccess(input, message) {
     const formControl = input.parentElement;
     formControl.className = "form-control success";
+    document.getElementById('link-btn').style.visibility = "visible"
   }
   
   // Event Listener
@@ -28,5 +30,7 @@ function showError(input, message) {
     showSuccess(answer)
   }
   })
+
+
   
   

@@ -102,3 +102,20 @@ body {
     margin-top: 20px;
     width: 100%;
   }
+  .link-btn {
+      position: absolute;
+      left:30vw;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 2px white;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    margin: auto;
+    width: 100%;
+    visibility: hidden;
+  }
+  .link-btn a {
+      text-decoration: none;
+      color: black;
+  }
