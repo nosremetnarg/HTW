@@ -19,9 +19,10 @@ function showError(input, message) {
   // Event Listener
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-  console.log(answer.value);
+    const noWhiteSpace = answer.value.replace(/\s+/g, '')
+  console.log(noWhiteSpace);
   
-  if (answer.value.toLowerCase( ) != "hunt the witch") {
+  if (noWhiteSpace.toLowerCase() != "huntthewitch") {
     showError(answer, 'Try Again')
   } else {
     showSuccess(answer)
