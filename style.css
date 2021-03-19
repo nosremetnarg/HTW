@@ -71,7 +71,7 @@ body {
   .form-control.success input {
     border-color: var(--success-color);
     background-color: var(--success-color);
-    border-width: large;
+    /* border-width: large; */
   }
   
   .form-control.error input {
@@ -103,8 +103,8 @@ body {
     width: 100%;
   }
   .link-btn {
-      position: absolute;
-      left:30vw;
+    position: absolute;
+    left:30vw;
     cursor: pointer;
     border: 2px solid black;
     border-radius: 2px white;
@@ -112,8 +112,9 @@ body {
     font-size: 16px;
     padding: 10px;
     margin: auto;
-    width: 100%;
+    width: 50%;
     visibility: hidden;
+    
   }
   .link-btn a {
       text-decoration: none;

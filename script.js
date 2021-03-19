@@ -2,6 +2,7 @@ const form = document.getElementById("form");
 const answer = document.getElementById("answer");
 const smallAnswer = document.getElementById("small");
 // const proceedBtn = document.querySelector('link-btn')
+// document.getElementById('link-btn').style.pointerEvents = 'none';
 
 // Show input Error
 function showError(input, message) {
@@ -11,11 +12,12 @@ function showError(input, message) {
     small.innerText = message;
   }
   
-  //Show sucess outline
-  function showSuccess(input, message) {
+  //Show success outline
+  function showSuccess(input) {
     const formControl = input.parentElement;
     formControl.className = "form-control success";
-    document.getElementById('link-btn').style.visibility = "visible"
+    document.getElementById("link-btn").style.visibility = "visible";
+    // answer.style.backgroundColor = "yellow"
   }
   
   // Event Listener
@@ -31,6 +33,7 @@ function showError(input, message) {
   }
   })
 
+  
 
   
   
