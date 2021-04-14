@@ -1,0 +1,541 @@
+/* TABLE OF CONTENTS */
+
+/* LINE 7 - 209 MAIN CSS */
+/* LINE 211 - 285 TABLET CSS */
+/* LINE 292 - 372 iPAD PRO CSS  */
+/* LINE 377 - 526 MOBILE CSS */
+
+/* MAIN CSS */
+html {
+  overflow-x: hidden;
+  -webkit-overflow-x: hidden;
+}
+
+/* MOBILE MENU - CENTER - ADDS BOTTOM PADDING */
+/* gNote this is not inside of a media query and may apply on desktop as well */
+.header--menu-open .header-menu-nav-folder-content {
+  padding-bottom: 200px;
+}
+
+/* STOP SHRINKING HEADER ON SCROLL - DESKTOP */
+.header.shrink .header-announcement-bar-wrapper {
+  padding-top: 25px !important;
+  padding-bottom: 25px !important;
+}
+
+/* REDUCE CAPTION SPACING ON IMAGES - PROJECTS PAGE */
+figcaption.image-caption-wrapper {
+  padding-top: 0 !important;
+}
+.image-caption p {
+  margin-top: 3px;
+  margin-bottom: 0;
+}
+
+/* HIDE TYPEWRITER TEXT ON PAGE
+    LOAD - HOMEPAGE */
+.movingText {
+  visibility: hidden;
+}
+
+/* CHANGE "MARK" TO THE COLOR RED ON HOMEPAGE */
+h3 strong em {
+  color: #a30000 !important;
+  font-style: normal;
+  -webkit-font-style: normal !important;
+}
+
+/* CHANGE TEXT TO BLACK - LEAVE YOUR MARK */
+#block-yui_3_17_2_1_1615352079042_4532 .image-subtitle-wrapper p {
+  color: #1a1a1a !important;
+  font-style: normal !important;
+  -webkit-font-style: normal !important;
+}
+
+/* CHANGE COMPANY NAME COLORS - LEAVE YOUR MARK SECTION */
+.image-subtitle-wrapper p em {
+  font-style: normal;
+  color: #a30000 !important;
+}
+
+/* REMOVE UNDERLINE, BOLD 18EIGHTYSIX - LEAVE YOUR MARK SECTION */
+.image-subtitle-wrapper span {
+  text-decoration: none !important;
+  font-weight: bold;
+  color: #1a1a1a !important;
+}
+
+/* SOLUTIONS PAGE */
+
+/* THIS SELECTOR IS FOR THE WHOLE SOLUTIONS PAGE */
+#collection-602ace42c1889644fc2f2728 h4 {
+  margin-bottom: 0 !important;
+}
+/* DIGITAL MARKETING ICON */
+#block-yui_3_17_2_1_1613706571887_45113 {
+  top: -15px;
+}
+/* EMAIL MARKETING ICON */
+#block-yui_3_17_2_1_1613708023744_11617 {
+  top: -30px;
+}
+/* SEO ICON */
+#block-yui_3_17_2_1_1613708023744_22341 {
+  top: -15px;
+}
+/* IDENTITY BRANDING ICON and WEB DESIGN ICON */
+#block-yui_3_17_2_1_1613709110195_22350,
+#block-yui_3_17_2_1_1613709110195_38580 {
+  top: -20px;
+}
+
+/* CONTENT CREATION ICON */
+#block-yui_3_17_2_1_1613709248020_22374 {
+  top: -10px;
+}
+
+/* NAVIGATION ITEM HOVER COLOR - ALL PAGES - DESKTOP */
+.header-nav-item > a:hover {
+  color: #a30000 !important;
+}
+.header-nav-folder-item:hover a {
+  color: #a30000 !important;
+}
+
+/* NAVIGATION ITEM ACTIVE COLOR - ALL PAGES - DESKTOP */
+.header-nav-item--active a {
+  color: #a30000 !important;
+}
+a {
+  background-image: none !important;
+}
+
+/* SOLID DROP SHADOW BUTTON ON BUTTONS - ALL PAGES */
+.sqs-block-button .sqs-block-button-element--medium {
+  box-shadow: 5px 5px #a30000;
+  transition: all ease-in 0.05s;
+}
+.sqs-block-button .sqs-block-button-element--medium:active {
+  box-shadow: none;
+  transform: translateY(4px) !important;
+  transition: all ease-in 0.05s;
+}
+
+/* SOLID DROP SHADOW BUTTON ON BUTTONS- ALL PAGES */
+.form-wrapper input[type="submit"] {
+  box-shadow: 5px 5px #a30000;
+  padding: 20px;
+}
+
+/* MOVE OVER HYPERLINKS */
+p a {
+  transition: ease-in-out 0.5s !important;
+}
+
+/* LINK HOVER PUSH RIGHT EFFECT */
+/* HOMEPAGE */
+#collection-604850d98be54e23df40293d p a:hover {
+  margin-left: 20px;
+  transition: ease-in-out 0.5s !important;
+}
+
+/* PROJECTS PAGE */
+#collection-60493445cfc3a24eb8ab3581 p a:hover {
+  margin-left: 20px;
+  transition: ease-in-out 0.5s !important;
+}
+
+/* SOLUTIONS PAGE */
+#collection-602ace42c1889644fc2f2728 p a:hover {
+  margin-left: 20px;
+  transition: ease-in-out 0.5s !important;
+}
+/* END LINK HOVER PUSH RIGHT*/
+
+/* REMOVE HYPHENS */
+p,
+h1,
+h2,
+h3,
+h4 {
+  -webkit-hyphens: manual !important;
+  -ms-hyphens: manual !important;
+  hyphens: manual !important;
+}
+
+/* SMOTHER FONTS */
+h1 {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+h2 {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+h3 {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+h4 {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+p {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* SOLID DROP SHADOW SOCIAL LINKS - FOOTER*/
+.sqs-svg-icon--wrapper {
+  box-shadow: 3px 6px #a30000;
+}
+/* REMOVE UNDERLINE IN NAVIGATION - ALL PAGES - DESKTOP */
+.header-nav-item--active a {
+  background-image: none !important;
+}
+
+/*NAVIGATION SOCIAL ICONS HOVER - RED*/
+.header-actions-action.header-actions-action--social a:hover svg {
+  fill: #a30000 !important;
+}
+
+/* FORM BUTTON RESIZE */
+input.button.sqs-system-button.sqs-editable-button {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 25px !important;
+}
+/* END OF MAIN CSS */
+
+/* DEFINE RULES FOR TABLET AND MOBILE QUERY */
+@mobile: ~"only screen and (max-width: 640px)";
+@tablet: ~"only screen and (min-width: 641px) and (max-width: 949px)";
+/* ------------------- */
+/* TABLET CSS */
+/* ------------------- */
+@media @tablet {
+  /* THIS HIDES ANY SPILL OVER CONTENT THAT MIGHT BE OUTSIDE OF THE WINDOW */
+  html {
+    overflow-x: hidden;
+  }
+  /* PROJECTS PAGE - ICON SIZE*/
+  #collection-602ace42c1889644fc2f2728 .sqs-block-image {
+    width: 40%;
+    margin-left: 0;
+  }
+
+  /* LEAVE YOUR MARK PHOTO */
+  #yui_3_17_2_1_1617908320086_64 img {
+    width: auto !important;
+    height: 100% !important;
+  }
+
+  h3 {
+    font-size: 110%;
+    letter-spacing: 0px;
+  }
+
+  /* LEAVE YOUR MARK PARAGRAPH TEXT */
+  #block-yui_3_17_2_1_1615352079042_4532 .image-subtitle-wrapper p {
+    font-size: 80% !important;
+  }
+
+  /* SOLUTIONS PAGE TABLET */
+  /* ALL SOLUTION P ELEMENT SPACING */
+  #block-8202a36c646c67aa36ad,
+  #block-yui_3_17_2_1_1613706571887_42667,
+  #block-yui_3_17_2_1_1613706571887_55635,
+  #block-yui_3_17_2_1_1613708023744_19312,
+  #block-yui_3_17_2_1_1613709110195_16698,
+  #block-yui_3_17_2_1_1613709110195_36473,
+  #block-yui_3_17_2_1_1613709248020_17340 {
+    padding-top: 0 !important;
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  /* SOLUTION PAGE ICONS */
+  /* MARKETING STRATEGY */
+  #block-yui_3_17_2_1_1613610959229_6403 {
+    padding-bottom: 10px !important;
+  }
+
+  #block-yui_3_17_2_1_1613706571887_45113,
+  #block-yui_3_17_2_1_1613708023744_11617,
+  #block-yui_3_17_2_1_1613708023744_22341,
+  #block-yui_3_17_2_1_1613709110195_22350,
+  #block-yui_3_17_2_1_1613709110195_38580,
+  #block-yui_3_17_2_1_1613709248020_22374 {
+    padding-bottom: 0px !important;
+  }
+
+  /* CONTACT PAGE - TABLET */
+  #block-yui_3_17_2_1_1617749370192_10183 {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  /* FOOTER LOGO */
+  #block-yui_3_17_2_1_1615349113917_26015 {
+    width: 50% !important;
+    margin: 0 auto;
+  }
+}
+/* TABLET MEDIA QUERY END */
+
+/* ===== ===== ===== ===== */
+/* TABLET iPAD MEDIA QUERY */
+/* ===== ===== ===== ===== */
+
+/* iPAD PRO MEDIA QUERY */
+@media only screen and (max-width: 1100px) and (min-width: 641px) {
+  /* LEAVE YOUR MARK PHOTO */
+  div#yui_3_17_2_1_1617931671764_279 {
+    width: 125% !important;
+  }
+  /* THIS CHANGES THE PROJECTS GRID */
+  /* THIS AFFECTS THE GRID ACROSS THE WHOLE WEB PAGE */
+  .sqs-col-2 {
+    width: 25% !important;
+  }
+  .sqs-col-3 {
+    width: 12.5% !important;
+  }
+
+  /* THIS CENTERS THE CONTACT FORM */
+  #page-section-606a279cd710d15c280301c0 .sqs-col-3 {
+    width: 25% !important;
+  }
+  /* THIS CHANGES THE SOLUTIONS LAYOUT*/
+  .sqs-col-1 {
+    width: 20% !important;
+  }
+  .sqs-col-4 {
+    width: 80% !important;
+  }
+  /* REMOVES SPACER ON PROJECTS PAGE IN FOOTER */
+  #block-yui_3_17_2_1_1615351211400_10593,
+  #block-yui_3_17_2_1_1615351211400_16455,
+  #block-yui_3_17_2_1_1613749392696_30352 {
+    display: none;
+  }
+  #block-yui_3_17_2_1_1615349113917_26015 {
+    margin: 0 auto !important;
+  }
+  /* ADJUSTING ICONS */
+  #block-yui_3_17_2_1_1613709110195_22350,
+  #block-yui_3_17_2_1_1613709110195_38580,
+  #block-yui_3_17_2_1_1613709248020_22374 {
+    width: 40% !important;
+    margin-left: 50px;
+  }
+  /* MORE ICON ADJUSTING */
+  #block-yui_3_17_2_1_1613708023744_22341,
+  #block-yui_3_17_2_1_1613708023744_11617,
+  #block-yui_3_17_2_1_1613706571887_45113,
+  #block-yui_3_17_2_1_1613610959229_6403 {
+    width: 50% !important;
+    margin-left: 40px;
+  }
+
+  /* REMOVING SPACER BLOCKS ON TABLET */
+  #block-yui_3_17_2_1_1613706571887_53097,
+  #block-yui_3_17_2_1_1616464121165_15537,
+  #block-yui_3_17_2_1_1616464121165_18827,
+  #block-yui_3_17_2_1_1613709110195_14014,
+  #block-yui_3_17_2_1_1616464121165_22194,
+  #block-yui_3_17_2_1_1613749355848_16689 {
+    display: none;
+  }
+  /* Adjusting alignment of Solutions page */
+  div#page-section-602f27eb630a906ee607edc7 {
+    margin-left: 52px !important;
+  }
+  /* Adjusting FOOTER TABLET */
+  footer {
+    position: relative;
+    left: 50%;
+    transform: translateX(-21%);
+  }
+  div#block-yui_3_17_2_1_1613442318225_9693 {
+    position: relative;
+    display: inline;
+    top: -20px;
+  }
+  footer p.sqsrte-small {
+    width: 150% !important;
+  }
+  /* ================= */
+  /* TABLET iPAD PRO QUERY END */
+}
+
+/* STOP SHRINKING HEADER ON SCROLL - MOBILE */
+
+/* =========== */
+/* MOBILE MEDIA QUERY */
+@media only screen and (max-width: 640px) {
+  #block-yui_3_17_2_1_1615352079042_4532 figcaption {
+    width: 85%;
+    margin-top: -23px !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #block-yui_3_17_2_1_1615352079042_4532 img {
+    max-width: 100% !important;
+    -o-object-fit: cover !important;
+    object-fit: cover !important;
+    margin: 0 auto;
+    background-color: #1a1a1a !important;
+    top: 0;
+    left: -45px !important;
+  }
+
+  .header.shrink .header-announcement-bar-wrapper {
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
+  }
+
+  /* PADDING FOR LEAVE YOUR MARK SECTION */
+  .sqs-block-image .design-layout-collage .image-card {
+    padding: 8% !important;
+  }
+
+  /* MOBILE PARAGRAPH SIZES */
+  .sqsrte-large {
+    font-size: 18px !important;
+  }
+  .sqsrte-small {
+    font-size: 12px !important;
+  }
+  p {
+    font-size: 15px !important;
+  }
+
+  /* Mobile Heading Sizes */
+  h1 {
+    font-size: 40px !important;
+  }
+  h2 {
+    font-size: 30px !important;
+  }
+  h3 {
+    font-size: 23px !important;
+  }
+  h4 {
+    font-size: 18px !important;
+  }
+  /* Mobile Monospace Sizes */
+  pre {
+    font-size: 12px !important;
+  }
+
+  /* CSS FOR MOBILE - PROJECTS PAGE - ICON SIZE*/
+  #collection-602ace42c1889644fc2f2728 .sqs-block-image {
+    width: 40%;
+    margin: 0 left;
+  }
+
+  /* ZOOM OUT HERO IMAGE ON MOBILE */
+  .section-background img {
+    -o-object-fit: contain !important;
+    object-fit: contain !important;
+    position: relative;
+    top: 10px;
+    background-color: #1a1a1a !important;
+  }
+
+  /* LOGO RESIZING - IN FOOTER */
+  #block-yui_3_17_2_1_1615349113917_26015 {
+    width: 70% !important;
+    margin: 0 auto !important;
+  }
+  div#block-yui_3_17_2_1_1613442318225_9693 {
+    position: relative;
+    display: inline;
+    top: -20px;
+  }
+  /* PROJECTS PAGE */
+
+  /* MAKE PROJECT THUMBNAILS LOOK GREAT AND CONSISTENT */
+  #block-yui_3_17_2_1_1617499251271_9925 img,
+  #block-yui_3_17_2_1_1617498791303_6413 img,
+  #block-yui_3_17_2_1_1617499730017_9707 img,
+  #block-yui_3_17_2_1_1617498791303_10869 img,
+  #block-yui_3_17_2_1_1617498791303_17627 img,
+  #block-yui_3_17_2_1_1617498019020_17689 img,
+  #block-yui_3_17_2_1_1617498019020_11933 img {
+    -o-object-fit: contain !important;
+    object-fit: contain !important;
+    height: 100% !important;
+  }
+  /* MOVE VINEYARD PICTURE OVER */
+  #block-yui_3_17_2_1_1617498791303_10869 img {
+    left: 0px !important;
+  }
+
+  /* SOLUTIONS PAGE MOBILE */
+
+  /* ADJUSTING THIS PERCENTAGE WILL CHANGE THE SIZE OF ALL THE ICONS FOR THE SOLUTIONS PAGE */
+  #yui_3_17_2_1_1618275479150_282,
+  #yui_3_17_2_1_1618275479150_314,
+  #yui_3_17_2_1_1618275479150_332,
+  #yui_3_17_2_1_1618275479150_351,
+  #yui_3_17_2_1_1618275479150_369,
+  #yui_3_17_2_1_1618275479150_388,
+  #yui_3_17_2_1_1618275479150_406 {
+    width: 50%;
+  }
+
+  /* MARKETING STRATEGY PARAGRAGH */
+  #block-8202a36c646c67aa36ad {
+    padding-top: 0px !important;
+  }
+  /* ADJUSTS BOTTOM MARGIN ON ALL H4 ELEMENTS. THIS MAKES SOLUTIONS PAGE LOOK BETTER */
+  h4 {
+    margin-bottom: 5px;
+  }
+  /* MOVES EMAIL MARKETING TEXT UP ON MOBILE */
+  #block-yui_3_17_2_1_1613706571887_55635 {
+    top: -60px;
+  }
+  /* MOVES DIGITAL MARKETING TEXT UP ON MOBILE */
+  #block-yui_3_17_2_1_1613706571887_42667 {
+    top: -40px;
+  }
+  /* MOVES SEO TEXT UP ON MOBILE */
+  #block-yui_3_17_2_1_1613708023744_19312 {
+    top: -50px;
+  }
+  /* MOVES IDENTITY BRANDING TEXT UP ON MOBILE */
+  #block-yui_3_17_2_1_1613709110195_16698 {
+    top: -50px;
+  }
+  /* MOVES WEB DESIGN AND DEVELOPMENT TEXT UP ON MOBILE */
+  #block-yui_3_17_2_1_1613709110195_36473 {
+    top: -40px;
+  }
+  /* MOVES CONTENT CREATION TEXT UP ON MOBILE */
+  #block-yui_3_17_2_1_1613709248020_17340 {
+    top: -60px;
+  }
+  /* ===== ===== ===== ===== */
+  /* END OF PHONE MEDIA QUERY */
+}
+
+/* MOBILE MENU - SOCIAL ICONS AND RED FADE EFFECT - PART 1 */
+/* gNote this is outside of a media query and is likely being applied across all screens */
+
+.header-menu-actions {
+  z-index: 9;
+  margin: 0px;
+  bottom: 0px;
+  width: 100% !important;
+  position: fixed;
+  padding: 20px 0px;
+  background: linear-gradient(to top, #a30000, #1a1a1a);
+}
+/* MOBILE MENU - SOCIAL ICONS AND RED FADE EFFECT - PART 2 //
+    .header-menu-cta a {margin-bottom: 150px;}
+    */

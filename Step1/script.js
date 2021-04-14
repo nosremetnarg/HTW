@@ -1,10 +1,7 @@
 const card = document.querySelector(".card__inner");
 const image = document.querySelector(".card__face--back");
-const tarot = document.querySelector(".hermit");
-const cardTitle = document.querySelector('.card__text--title');
-const cardAbout = document.querySelector('.card__text--about');
-const btn = document.querySelector('.hanged_man');
-const bull = document.querySelector('.theBull');
+const tarot = document.querySelector(".tarot");
+const frontOfCard = document.querySelector(".card__face--front");
 
 
 // Titles of Tarot Cards
@@ -30,9 +27,6 @@ let photoIndex;
 // Picks random photo index
 function randomNumber() {
   let randomNum = Math.floor(Math.random() * photoArray.length);
-  // use when Testing The Hanged Man
-  // let randomNum = 2
-
   console.log(randomNum);
   photoIndex = randomNum;
   
@@ -62,25 +56,33 @@ card.addEventListener("click", function () {
 
     // TAROT card face is showing
     isFlipped = true;
-    let newCardTitle = cardTitle.innerHTML = photoArray[photoIndex];
     flipTheCard();
     loadPicture(photoArray[photoIndex]);
-
-    // create hanged man btn
-    if (newCardTitle === "THE HANGED MAN") {
-        bull.classList.add('visible')
-    } else if (newCardTitle !== "THE HANGED MAN") {
-    }
-    cardAbout.innerHTML = "";
+    document.getElementById('backOfCard').style.opacity = 0.9
+    
 
   } else if (isFlipped) {
 
     // TAROT card face is not showing
     randomNumber();
-    cardTitle.innerHTML = "&nbsp";
     isFlipped = false;
     flipTheCard();
 
   }
   console.log(`is the card flipped ${isFlipped}`);
 });
+
+// BLURRY BACKGROUND
+const blurry = document.querySelector('#backgroundGIF');
+  let load = 0;
+  let int = setInterval(blurring, 30)
+  function blurring(){
+  load++;
+    if (load > 99){
+    clearInterval(int)
+    }
+    blurry.style.filter = `blur(${scale(load, 0, 100, 20, 0)}px)`
+  }
+  const scale = (num, in_min, in_max, out_min, out_max) => {
+    return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+  }
