@@ -58,6 +58,7 @@
     transform-style: preserve-3d;
     cursor: pointer;
     position: relative;
+    border-radius: 5px;
     
   }
   
@@ -103,10 +104,8 @@
       
       visibility: hidden;
       bottom: 0%;
-      left: 60%;
-      background-color: red;
-      color: pink;
-      width: calc(100% / 5);
+      left: 55%;
+      width: calc(100% / 4);
       height: 30%;
       z-index: 2;
       overflow-x: hidden;
@@ -123,6 +122,7 @@
       .card__face {
         border-radius: 4px;
       }
+      
   }
   @media only screen and (max-width: 480px) {
     .card {
@@ -131,6 +131,12 @@
       .card__face {
         border-radius: 2px;
       }
+  }
+  @media only screen and (max-height: 650px) {
+    .fingerPrint {
+        
+        width: calc(70% / 5);
+    }
   }
   
   @keyframes fadeIn {
