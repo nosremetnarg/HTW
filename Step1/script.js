@@ -1,4 +1,5 @@
 const card = document.querySelector(".card__inner");
+const cardBack = document.querySelector(".back");
 const image = document.querySelector(".card__face--back");
 const tarot = document.querySelector(".tarot");
 const frontOfCard = document.querySelector(".card__face--front");
@@ -18,54 +19,77 @@ const photoArray = [
   "THE SUN",
   "THE MAGICIAN",
   "THE FOOL",
-  "THE JOURNEY"
+  "THE JOURNEY",
+  "THE BEAST"
 ];
+
+const backOfCardArray = [
+    "backCardNew",
+    "backCardFingerprint"
+
+]
 
 let isFlipped = false;
 let photoIndex;
+let backOfCardIndex;
+let thirteen = false;
 
 // Picks random photo index
 function randomNumber() {
   let randomNum = Math.floor(Math.random() * photoArray.length);
-  console.log(randomNum);
+//   let randomNum = 13;
+console.log(randomNum);
   photoIndex = randomNum;
-  
+  if ( randomNum === 13 ) {
+      backOfCardIndex = 1;
+  } else {
+      backOfCardIndex = 0;
+  }
 }
+let num;
 // Load picture on initial page load
 randomNumber();
 loadPicture(photoArray[photoIndex]);
-getPhototitle(photoArray[photoIndex])
+loadBackPicture(backOfCardArray[backOfCardIndex]);
+
+console.log(`back of card source ${card.src}`);
 
 function loadPicture(photo) {
   console.log(`title ${photo}`);
   tarot.src = `../img/${photo}.png`;
 }
 
-function getPhototitle(photo) {
-  let title = photo;
-  console.log(title);
+function loadBackPicture(photo){
+    console.log(photo);
+    cardBack.src = `../img/${photo}.png`;
+    
 }
 
+
 function flipTheCard() {
-    card.classList.toggle("is-flipped");
+    setTimeout(function(){ card.classList.toggle("is-flipped") }, 150);
+    // card.classList.toggle("is-flipped");
 }
 
 // Event listener for clicks
 card.addEventListener("click", function () {
   if (!isFlipped) {
-
     // TAROT card face is showing
     isFlipped = true;
     flipTheCard();
-    loadPicture(photoArray[photoIndex]);
+    loadPicture(photoArray[photoIndex]);;
     document.getElementById('backOfCard').style.opacity = 0.9
-    
+    loadBackPicture(backOfCardArray[backOfCardIndex]);
+    //  if (thirteen) {
+    //     //  playBeastAudio()
+    // }
 
   } else if (isFlipped) {
 
     // TAROT card face is not showing
     randomNumber();
     isFlipped = false;
+    loadBackPicture(backOfCardArray[backOfCardIndex])
     flipTheCard();
 
   }
