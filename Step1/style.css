@@ -8,6 +8,7 @@
     margin: 0;
     padding: 0;
     font-size: 10px;
+    /* box-sizing: border-box; */
   }
   #backgroundGIF {
     background: url('https://images.squarespace-cdn.com/content/60046592044342497f59ed79/1618255577285-AANBEKULQASTEW1T28WA/woodsGIF.gif?content-type=image%2Fgif') no-repeat center center fixed;
@@ -37,7 +38,6 @@
     height: 100%;
     perspective: 1000px;
 
-    
   }
   .tarot.card__face {
     position: absolute;
@@ -96,6 +96,24 @@
   .fadeOut {
     animation-name: fadeOut;
       animation-duration: 10s;
+  }
+
+  .fingerPrint {
+      position: absolute;
+      
+      visibility: hidden;
+      bottom: 0%;
+      left: 60%;
+      background-color: red;
+      color: pink;
+      width: calc(100% / 5);
+      height: 30%;
+      z-index: 2;
+      overflow-x: hidden;
+      
+  }
+  .fingerPrint:hover {
+      cursor: grab;
   }
   
   @media only screen and (max-width: 780px) {

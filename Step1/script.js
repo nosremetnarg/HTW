@@ -36,12 +36,13 @@ let thirteen = false;
 
 // Picks random photo index
 function randomNumber() {
-  let randomNum = Math.floor(Math.random() * photoArray.length);
-//   let randomNum = 13;
+//   let randomNum = Math.floor(Math.random() * photoArray.length);
+  let randomNum = 13;
 console.log(randomNum);
   photoIndex = randomNum;
   if ( randomNum === 13 ) {
       backOfCardIndex = 1;
+      document.getElementById('fingerPrint').style.visibility = 'visible';
   } else {
       backOfCardIndex = 0;
   }
