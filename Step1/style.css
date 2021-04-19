@@ -12,8 +12,8 @@
   }
   #backgroundGIF {
     background: url('https://images.squarespace-cdn.com/content/60046592044342497f59ed79/1618255577285-AANBEKULQASTEW1T28WA/woodsGIF.gif?content-type=image%2Fgif') no-repeat center center fixed;
-  background-size: cover;
-  margin:0;
+    background-size: cover;
+    margin:0;
     position: absolute;
     top: 0;
     left: 0;
@@ -80,8 +80,7 @@
     justify-content: center;
   }
   
-  .card__face--back { transform: rotateY(180deg) ; 
-     }
+  .card__face--back { transform: rotateY(180deg); }
   
   .card__content {
     width: 100%;
