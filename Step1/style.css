@@ -12,9 +12,6 @@
   }
   #backgroundGIF {
     background: url('https://images.squarespace-cdn.com/content/60046592044342497f59ed79/1618255577285-AANBEKULQASTEW1T28WA/woodsGIF.gif?content-type=image%2Fgif') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   margin:0;
     position: absolute;
@@ -23,7 +20,8 @@
     width: 100vw;
     height: 100vh;
     z-index: -1;
-    filter: blur(20px);
+    -webkit-filter: blur(20px);
+            filter: blur(20px);
   }
   .card-container {
       position: absolute;
@@ -91,12 +89,16 @@
   }
 
   .fadeIn {
-    animation-name: fadeIn;
-      animation-duration: 10s;
+    -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+      -webkit-animation-duration: 10s;
+              animation-duration: 10s;
   }
   .fadeOut {
-    animation-name: fadeOut;
-      animation-duration: 10s;
+    -webkit-animation-name: fadeOut;
+            animation-name: fadeOut;
+      -webkit-animation-duration: 10s;
+              animation-duration: 10s;
   }
 
   .fingerPrint {
@@ -112,6 +114,7 @@
       
   }
   .fingerPrint:hover {
+      cursor: -webkit-grab;
       cursor: grab;
   }
   
@@ -138,9 +141,19 @@
     }
   }
   
+  @-webkit-keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+  }
+  
   @keyframes fadeIn {
       from {opacity: 0;}
       to {opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeOut {
+      from {opacity: 1;}
+      to {opacity: 0;}
   }
   
   @keyframes fadeOut {
