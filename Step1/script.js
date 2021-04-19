@@ -48,7 +48,7 @@ randomNumber();
 loadPicture(photoArray[photoIndex]);
 loadBackPicture(backOfCardArray[backOfCardIndex]);
 
-console.log(`back of card source ${card.src}`);
+
 
 function loadPicture(photo) {
   console.log(`title ${photo}`);
