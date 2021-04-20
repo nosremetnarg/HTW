@@ -40,13 +40,10 @@ function randomNumber() {
     document.getElementById("fingerPrint").style.visibility = "visible";
   } else {
     backOfCardIndex = 0;
+    document.getElementById("fingerPrint").style.visibility = "hidden";
   }
 }
 let num;
-// Load picture on initial page load
-randomNumber();
-loadPicture(photoArray[photoIndex]);
-loadBackPicture(backOfCardArray[backOfCardIndex]);
 
 function loadPicture(photo) {
   console.log(`title ${photo}`);
@@ -159,3 +156,9 @@ blurryBackground.addEventListener("click", function () {
   }
   console.log("We are walking through the woods");
 });
+
+
+// Load picture on initial page load
+randomNumber();
+loadPicture(photoArray[photoIndex]);
+loadBackPicture(backOfCardArray[backOfCardIndex]);
