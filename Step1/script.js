@@ -54,9 +54,19 @@ function loadPicture(photo) {
 }
 
 function loadBackPicture(photo) {
-  console.log(photo);
-  cardBack.src = `../img/${photo}.png`;
+  if (photoIndex === 13) {
+    console.log(photo);
+    cardBack.src = `../img/${photo}.png`;
+    thirteen = true;
+    playBeastAudio();
+    isBeast = true;
+  } else {
+  	console.log(' the number is NOT 13 ');
+    cardBack.src = `../img/${photo}.png`;
+    thirteen = false;
+  }  
 }
+
 
 function flipTheCard() {
   setTimeout(function () {
