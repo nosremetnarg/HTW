@@ -48,8 +48,6 @@ randomNumber();
 loadPicture(photoArray[photoIndex]);
 loadBackPicture(backOfCardArray[backOfCardIndex]);
 
-
-
 function loadPicture(photo) {
   console.log(`title ${photo}`);
   tarot.src = `../img/${photo}.png`;
@@ -103,3 +101,51 @@ function blurring() {
 const scale = (num, in_min, in_max, out_min, out_max) => {
   return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
 };
+
+// AUDIO SCRIPT
+
+const audio = new Audio(
+  "https://static1.squarespace.com/static/60046592044342497f59ed79/606db93b02bfcf3eb6224e19/606dd619e155ef4f9f161694/1617810970946/Hunt+The+Witch+-+Woods+Walking+Towards+Hut+%28128%29.mp3"
+);
+const beastCardAudio = new Audio(
+  "https://static1.squarespace.com/static/60046592044342497f59ed79/606db93b02bfcf3eb6224e19/606e120979b1f41fce8e38f2/1617826314510/Hunt+The+Witch+-+Bass+Drum+%26+Trash+Can+Hit.mp3"
+);
+const body = document.getElementById("body");
+const blurryBackground = document.querySelector(".blurryBG");
+
+let isPlaying = false;
+let isBeast = false;
+
+function playAudio() {
+  audio.play();
+  audio.loop = true;
+  isPlaying = true;
+}
+function playBeastAudio(){
+  beastCardAudio.play();
+  isBeast = false;
+}
+function stopAudio() {
+  audio.pause();
+  isPlaying = false;
+}
+function playWoodsSound(evt) {
+  evt.preventDefault();
+   if (!isPlaying) {
+     playAudio();
+     audio.volume = 0.2;
+   } else {
+     stopAudio();
+   }
+   console.log("We are walking through the woods");
+ }
+
+blurryBackground.addEventListener("click", function () {
+  if (!isPlaying) {
+    playAudio();
+    audio.volume = 0.1;
+  } else {
+    stopAudio();
+  }
+  console.log("We are walking through the woods");
+});

@@ -1,164 +1,192 @@
 :root {
-    --dark: #222;
-    --light: #f3f3f3;
-    --gold: #ffd700;
-  }
+  --dark: #222;
+  --light: #f3f3f3;
+  --gold: #ffd700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  /* box-sizing: border-box; */
+}
+#backgroundGIF {
+  background: url("https://images.squarespace-cdn.com/content/60046592044342497f59ed79/1618255577285-AANBEKULQASTEW1T28WA/woodsGIF.gif?content-type=image%2Fgif")
+    no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  -webkit-filter: blur(20px);
+  filter: blur(20px);
+}
+.blurryBG {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* z-index: -1; */
+  filter: blur(30px);
+}
+.card-container {
+  position: relative;
+  width: 25%;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  transform:  translate(-50%, -50%);
+  margin: 0;
+  display: block;
+}
   
-  * {
-    margin: 0;
-    padding: 0;
-    font-size: 10px;
-    /* box-sizing: border-box; */
-  }
-  #backgroundGIF {
-    background: url('https://images.squarespace-cdn.com/content/60046592044342497f59ed79/1618255577285-AANBEKULQASTEW1T28WA/woodsGIF.gif?content-type=image%2Fgif') no-repeat center center fixed;
-    background-size: cover;
-    margin:0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-    -webkit-filter: blur(20px);
-            filter: blur(20px);
-  }
-  .card-container {
-      position: absolute;
-      width: 100%;
-      height: 50%;
-      margin: auto;
-      top: 50px;
+.card {
+  margin: auto auto;
+  width: 390px;
+  height: 100%;
+  perspective: 1000px;
+}
+.tarot.card__face {
+  position: absolute;
+  width: auto;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 6px;
+}
+
+.card__inner {
+  width: auto;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+  border-radius: 5%;
+}
+
+.card__inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.card__face--front {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__face--back {
+  transform: rotateY(180deg);
+}
+
+.card__content {
+  width: 100%;
+  height: 100%;
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+}
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+}
+
+.fingerPrint {
+  position: absolute;
+
+  visibility: hidden;
+  bottom: 0%;
+  left: 55%;
+  width: calc(100% / 4);
+  height: 30%;
+  z-index: 2;
+  overflow-x: hidden;
+}
+.fingerPrint:hover {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+@media only screen and (max-width: 780px) {
+  body {
+    background-color: red;
   }
   .card {
-    margin: auto auto;
-    width: 390px;
-    height: 100%;
-    perspective: 1000px;
-
+    height: 50vh;
   }
-  .tarot.card__face {
-    position: absolute;
-    width: auto;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    overflow: hidden;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 6px;
-  }
-  
-  .card__inner {
-    width: auto;
-    height: 100%;
-    transition: transform 1s;
-    transform-style: preserve-3d;
-    cursor: pointer;
-    position: relative;
-    border-radius: 15px;
-    
-  }
-  
-  .card__inner.is-flipped {
-    transform: rotateY(180deg);
-  }
-  
   .card__face {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    overflow: hidden;
-    border-radius: 16px;
+    border-radius: 4px;
   }
-  
-  .card__face--front {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+}
+@media only screen and (max-width: 480px) {
+  .card {
+    height: 50vh;
   }
-  
-  .card__face--back { transform: rotateY(180deg); }
-  
-  .card__content {
-    width: 100%;
-    height: 100%;
+  .card__face {
+    border-radius: 2px;
   }
-
-  .fadeIn {
-    -webkit-animation-name: fadeIn;
-            animation-name: fadeIn;
-      -webkit-animation-duration: 10s;
-              animation-duration: 10s;
-  }
-  .fadeOut {
-    -webkit-animation-name: fadeOut;
-            animation-name: fadeOut;
-      -webkit-animation-duration: 10s;
-              animation-duration: 10s;
-  }
-
+}
+@media only screen and (max-height: 650px) {
   .fingerPrint {
-      position: absolute;
-      
-      visibility: hidden;
-      bottom: 0%;
-      left: 55%;
-      width: calc(100% / 4);
-      height: 30%;
-      z-index: 2;
-      overflow-x: hidden;
-      
+    width: calc(70% / 5);
   }
-  .fingerPrint:hover {
-      cursor: -webkit-grab;
-      cursor: grab;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  @media only screen and (max-width: 780px) {
-    body {
-      background-color: red;
-    }
-    .card {
-        height: 50vh;
-      }
-      .card__face {
-        border-radius: 4px;
-      }
+  to {
+    opacity: 1;
   }
-  @media only screen and (max-width: 480px) {
-    .card {
-        height: 50vh;
-      }
-      .card__face {
-        border-radius: 2px;
-      }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  @media only screen and (max-height: 650px) {
-    .fingerPrint {
-        
-        width: calc(70% / 5);
-    }
+  to {
+    opacity: 1;
   }
-  
-  @-webkit-keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
   }
-  
-  @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
+  to {
+    opacity: 0;
   }
-  
-  @-webkit-keyframes fadeOut {
-      from {opacity: 1;}
-      to {opacity: 0;}
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
   }
-  
-  @keyframes fadeOut {
-      from {opacity: 1;}
-      to {opacity: 0;}
+  to {
+    opacity: 0;
   }
+}
