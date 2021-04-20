@@ -143,9 +143,7 @@
   .fingerPrint {
     width: calc(70% / 5);
   }
-  #backgroundGIF {
-    
-  }
+  
 }
 @media only screen and (max-width: 480px) {
 
