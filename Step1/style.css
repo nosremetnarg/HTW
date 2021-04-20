@@ -143,16 +143,20 @@
   .fingerPrint {
     width: calc(70% / 5);
   }
-  
+  #backgroundGIF { background-position: center; }
+  .card {
+    height: 35vh;
+  }
 }
 @media only screen and (max-width: 480px) {
 
   .card {
-    height: 50vh;
+    height: 25vh;
   }
   .card__face {
     border-radius: 2px;
   }
+  /* #backgroundGIF { background-position: center; } */
 }
 
 
