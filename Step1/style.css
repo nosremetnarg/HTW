@@ -131,9 +131,7 @@
 }
 
 @media only screen and (max-width: 780px) {
-  body {
-    background-color: red;
-  }
+  
   .card {
     height: 50vh;
   }
@@ -141,7 +139,17 @@
     border-radius: 4px;
   }
 }
+@media only screen and (max-width: 650px) {
+  .fingerPrint {
+    width: calc(70% / 5);
+  }
+  #backgroundGIF {
+    background: none;
+    background-color: orange;
+  }
+}
 @media only screen and (max-width: 480px) {
+
   .card {
     height: 50vh;
   }
@@ -149,11 +157,7 @@
     border-radius: 2px;
   }
 }
-@media only screen and (max-height: 650px) {
-  .fingerPrint {
-    width: calc(70% / 5);
-  }
-}
+
 
 @-webkit-keyframes fadeIn {
   from {
