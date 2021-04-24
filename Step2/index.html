@@ -1,20 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="/favicon.png" />
-</head>
-<body id="background">
-    <div class="questionContainer">
-<div class="question1">
-    Question 1
-</div>
-<div class="answer1">
-answer
-</div>
+  </head>
+  <div id="background">
+        <p>Find the hidden word - Enter a letter</p>
+        <div class="game-container">
+            <div class="wrong-letters-container">
+                <div class="wrong-letters"></div>
+            </div>
+
+            <div class="word" id="word"></div>
+        </div>
+
+    <!-- CONTAINER FOR FINAL MESSAGE -->
+         <div class="popup-container" id="popup-container">
+             <div class="popup">
+                 <h2 id="final-message"></h2>
+            </div>
+        </div>
+
+    <!--  NOTIFICATION  -->
+    <div class="notification-container" id="notification-container">
+      <p>You have already enter this letter</p>
     </div>
-</body>
+    <script src="script.js"></script>
+  </div>
 </html>

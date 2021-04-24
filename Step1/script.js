@@ -95,7 +95,7 @@ card.addEventListener("click", function () {
 });
 
 // BLURRY BACKGROUND
-const blurry = document.querySelector("#backgroundGIF");
+const blurry = document.querySelector(".card");
 let load = 0;
 let int = setInterval(blurring, 30);
 function blurring() {
@@ -108,6 +108,21 @@ function blurring() {
 const scale = (num, in_min, in_max, out_min, out_max) => {
   return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
 };
+
+// // BLURRY Card
+// const blurryCard = document.querySelector(".card");
+// let loadTwo = 0;
+// let intTwo = setInterval(blurringTwo, 30);
+// function blurringTwo() {
+//   loadTwo++;
+//   if (loadTwo > 99) {
+//     clearInterval(intTwo);
+//   }
+//   blurryCard.style.filter = `blur(${scaleTwo(loadTwo, 0, 100, 20, 0)}px)`;
+// }
+// const scaleTwo = (num, in_min, in_max, out_min, out_max) => {
+//   return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
+// };
 
 // AUDIO SCRIPT
 

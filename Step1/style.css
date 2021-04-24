@@ -11,7 +11,7 @@
   /* box-sizing: border-box; */
 }
 #backgroundGIF {
-  background: url("https://images.squarespace-cdn.com/content/60046592044342497f59ed79/1618255577285-AANBEKULQASTEW1T28WA/woodsGIF.gif?content-type=image%2Fgif")
+  background: url("https://github.com/nosremetnarg/HTW/blob/main/hut_bright_resize_large.gif?raw=true")
     no-repeat center center fixed;
   background-size: cover;
   margin: 0;
@@ -24,14 +24,28 @@
   -webkit-filter: blur(20px);
   filter: blur(20px);
 }
+.welcomeText {
+  font-size: 3rem;
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  position: relative; 
+  top: -10px;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Garamond Rough";
+}
+.noBlur {
+  filter: blur(0px);
+}
 .blurryBG {
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  /* z-index: -1; */
-  filter: blur(30px);
+  z-index: -1; 
+  /* filter: blur(30px); */
 }
 .card-container {
   position: relative;
@@ -49,6 +63,7 @@
   width: 390px;
   height: 100%;
   perspective: 1000px;
+  filter: blur(30px);
 }
 .tarot.card__face {
   position: absolute;
@@ -146,6 +161,10 @@
   #backgroundGIF { background-position: center; }
   .card {
     height: 35vh;
+  }
+  .welcomeText {
+    font-size: 1.5rem;
+    top: -70px
   }
 }
 @media only screen and (max-width: 480px) {

@@ -17,7 +17,7 @@
   width: 100vw;
   height: 100vh;
 }
-body {
+#body {
   position: relative;
 }
 
@@ -31,6 +31,31 @@ body {
   left: 55%;
   transform: translate(-50%, -50%);
   border-radius: 10px;
+}
+.game-container {
+  padding: 20px 30px;
+  position: relative;
+  margin: auto;
+  height: 350px;
+  width: 450px;
+}
+.word {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.letter {
+  border-bottom: 3px solid rgb(243, 242, 242);
+  display: inline-flex;
+  font-size: 30px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 3px;
+  height: 50px;
+  width: 20px;
+  color: rgb(243, 242, 242);
 }
 
 @media only screen and (min-width: 601px) and (max-width: 780px){
@@ -46,7 +71,5 @@ body {
     background-size: contain;
     background-color: black;
   }
-  .questionContainer {  }
-  
 }
 
