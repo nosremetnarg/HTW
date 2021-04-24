@@ -6,6 +6,12 @@ const popup = document.getElementById("popup-container");
 const mobAudio = new Audio(
   "https://static1.squarespace.com/static/60046592044342497f59ed79/606db93b02bfcf3eb6224e19/60803a5b9d99fb68ef7de910/1619016337096/Hunt+The+Witch+-+Mob.mp3"
 );
+const draggingAudio = new Audio('https://static1.squarespace.com/static/60046592044342497f59ed79/606db93b02bfcf3eb6224e19/60803c7d4e46f67c7b203182/1619016838265/Hunt+The+Witch+-+Dragging.mp3');
+const hammeringAudio = new Audio('https://static1.squarespace.com/static/60046592044342497f59ed79/606db93b02bfcf3eb6224e19/60803ebf00361404e3e7d040/1619017415032/Hunt+The+Witch+-+Hammering+Post.mp3');
+const ropeAudio = new Audio('https://static1.squarespace.com/static/60046592044342497f59ed79/606db93b02bfcf3eb6224e19/608183f0a34a765b70df974f/1619100657986/Hunt+The+Witch+-+Rope.mp3');
+const crowAudio = new Audio('https://static1.squarespace.com/static/60046592044342497f59ed79/606db93b02bfcf3eb6224e19/60803ae7be099e0c8d4f6e7c/1619016429775/Hunt+The+Witch+-+Crows.mp3');
+const fireAudio = new Audio('https://static1.squarespace.com/static/60046592044342497f59ed79/606db93b02bfcf3eb6224e19/60803ad92ac9786e478e8225/1619016414712/Hunt+The+Witch+-+Raging+Fire.mp3');
+
 const secretWord = "iwillneverdie";
 
 const correctLetters = [];
@@ -46,6 +52,12 @@ function updateWrongLettersEl() {
     popup.style.display = "flex";
   }
 }
+// Redirect function
+function redirect() {
+    setTimeout(() => {
+        location.replace('https://www.deltarae.com')
+    }, 10000)
+}
 
 // Show notification
 function showNotification() {
@@ -56,8 +68,18 @@ function showNotification() {
 }
 let wrongLetterCount = 0;
 // Play Sounds for each wrong Answer
-function wrongAnswerSounds() {
+function wrongAnswerSounds(wrongLetterCount) {
   if (wrongLetterCount === 1) {
+      draggingAudio.play();
+  } else if (wrongLetterCount === 2) {
+    hammeringAudio.play();
+  } else if (wrongLetterCount === 3) {
+    ropeAudio.play();
+  } else if (wrongLetterCount === 4) {
+      crowAudio.play();
+  } else if (wrongLetterCount === 5 ) {
+      fireAudio.play();
+    redirect();
   }
 }
 
@@ -77,6 +99,7 @@ window.addEventListener("keydown", (e) => {
     } else {
       if (!wrongLetters.includes(letter)) {
         wrongLetterCount++;
+        wrongAnswerSounds(wrongLetterCount)
         wrongLetters.push(letter);
         updateWrongLettersEl();
       } else {
